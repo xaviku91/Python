@@ -4,15 +4,12 @@
 from datetime import datetime
 
 # Imprimir la fecha sin variable
-'''
 print(datetime.now())
 print(datetime.now().year)
 print(datetime.now().month)
 print(datetime.now().day)
-'''
 
 # Imprimir la fecha con variable
-'''
 ahora = datetime.now()
 print(ahora)
 print(ahora.year)
@@ -20,7 +17,7 @@ print(ahora.month)
 print(ahora.day)
 print(ahora.hour)
 print(ahora.minute)
-'''
+
 '''
 # Imprimir la fecha con formato
 otra_fecha = ahora.timestamp()
@@ -57,9 +54,34 @@ nueva_fecha = date.today()
 print(nueva_fecha)
 
 # Podemos definir una fecha concreta
-nueva_fecha = date(2023, 1, 1)
+nueva_fecha = date(2022, 10, 12)
 print(nueva_fecha)
 
 # Sumar y restar días a una fecha
 fecha_suma = date(nueva_fecha.year, nueva_fecha.month, nueva_fecha.day + 5)
 print(fecha_suma) # Imprime la fecha con 5 días más
+
+# Restar fechas
+diff = year_2023 - ahora
+print(diff) 
+
+# Restar fechas con date 
+diff = year_2023.date() - nueva_fecha
+print(diff) 
+
+'''
+#No deja 
+diff = year_2023.time() - nueva_fecha
+print(diff) 
+'''
+
+print(year_2023.time()) 
+
+#print(year_2023 - current_time) #No se puede restar una fecha con una hora
+
+# Timedelta - Sumar y restar días a una fecha (Trabajar con franjas de de fechas)
+from datetime import timedelta
+start_timedelta = timedelta(200, 100, 100, weeks=10)
+end_timedelta = timedelta(300, 100, 100, weeks=13)
+print(end_timedelta - start_timedelta)
+print(end_timedelta + start_timedelta)
