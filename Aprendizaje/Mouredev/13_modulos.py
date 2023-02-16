@@ -1,4 +1,4 @@
-### Modulos - modules ###
+### Módulos - modules ###
 # Un modulo es un archivo de python que contiene funciones, clases, variables, etc.
 import modulo
 
@@ -10,7 +10,7 @@ modulo.sumaValores(1, 2, 3)
 from modulo import restaValores
 restaValores(5, 2, 1)
 
-# importar modulos predefinidos de python
+# importar módulos predefinidos de python
 import math 
 print(math.pi) # muestra el valor de pi
 print(math.pow(2, 3)) # muestra el valor de 2 elevado a 3
