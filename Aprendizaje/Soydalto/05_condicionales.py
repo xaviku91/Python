@@ -67,3 +67,5 @@ elif ingreso_mensual > 1000:
     print(f"Tu ingreso mensual tiene un 10% de retención de impuestos, es decir, ", ingreso_mensual * 0.1, "€.")
 else:
     print(f"Tu ingreso mensual tiene un 5% de retención de impuestos, es decir, ", ingreso_mensual * 0.05, "€.")
+
+
