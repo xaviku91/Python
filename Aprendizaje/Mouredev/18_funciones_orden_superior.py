@@ -2,6 +2,7 @@
 # Una función de orden superior es una función que recibe como parámetro otra función o devuelve una función como resultado.
 # Las funciones de orden superior son muy útiles para abstraer comportamientos y reutilizar código.
 
+
 # Función que recibe como parámetro otra función 
 def suma_uno(valor):
   return valor + 1
@@ -60,7 +61,7 @@ saludo()
 
 ### Built-in Higher Order Functions ###
 
-numeros = [2, 5, 10, 21]
+numeros = [2, 5, 10, 21, 52]
 
 # Map
 # map() es una función que recibe como parámetro otra función y una lista. La función que recibe como parámetro debe recibir un solo parámetro y devolver un valor. map() devuelve un iterador que aplica la función a cada elemento de la lista.
@@ -69,4 +70,38 @@ def doble(num):
   return num * 2
 
 map(doble, numeros) 
+
+# Para ver el resultado de la función map() debemos convertir el iterador a una lista:
 print(list(map(doble, numeros))) # [4, 10, 20, 42]
+
+# Otra manera de hacer lo mismo pero utilizando una lambda además de lo crear una lista, para definir la función:
+print(list(map(lambda number: number * 2, numeros))) # [4, 10, 20, 42]
+
+
+# Filter:
+# filter() es una función que recibe como parámetro otra función y una lista. La función que recibe como parámetro debe recibir un solo parámetro y devolver un valor booleano. filter() devuelve un iterador que aplica la función a cada elemento de la lista y devuelve aquellos elementos que devuelven True.
+def filtra_valores_mayores_diez(numeros):
+  if numeros > 10:
+    return True
+  return False
+
+# Para ver el resultado de la función filter() debemos convertir el iterador a una lista:
+# En este caso nos devuelve los valores que cumplen la condición de la función,
+# los números mayores a diez de la variable "números".
+print(list(filter(filtra_valores_mayores_diez, numeros)))
+
+# Para ver el resultado de la función (Es lo mismo que la anterior, pero con lambda)
+# filter() utilizando una lambda:
+print(list(filter(lambda number: number > 10, numeros)))
+
+# Reduce:
+# Acumula el valor y lo suma con el anterior valor de la lista. En este caso: (2 + 5 = 7, 7 + 10 = 17, 17 + 21 = 38, 38 + 52 = 90)
+# Los dos últimos valores son las sumas de los anteriores, y hemos pedido que nos los devuelva
+from functools import reduce
+
+def suma_dos_valores(primer_valor, segundo_valor):
+  print(primer_valor) # primer_valor: 38 (2 + 5 + 10 + 21)
+  print(segundo_valor) # segundo_valor: 52 (52)
+  return primer_valor + segundo_valor # 38 + 52 = 90
+
+print(reduce(suma_dos_valores, numeros))
