@@ -1,5 +1,6 @@
 Mi nombre es Xavi
 Mi apellido es Quesada
-Tengo 31 a�os
+Tengo 31 años
 Y mi lenguaje favorito es Python
 Soy de Sabadell
+También me gusta Java
