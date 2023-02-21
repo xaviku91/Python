@@ -1,5 +1,5 @@
-Me llamo Xavi
+Mi nombre es Xavi
 Mi apellido es Quesada
-Me encanta Python
-Tengo 31 aÃ±os
-Mi ciudad es Sabadell
+Tengo 31 años
+Y mi lenguaje favorito es Python
+Soy de Sabadell

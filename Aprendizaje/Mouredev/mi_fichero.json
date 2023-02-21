@@ -1,0 +1,11 @@
+{
+  "nombre": "Xavi",
+  "apellido": "Quesada",
+  "edad": 31,
+  "lenguajes": [
+    "Python",
+    "Java",
+    "C++"
+  ],
+  "ciudad": "Sabadell"
+}
