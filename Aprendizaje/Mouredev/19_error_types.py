@@ -71,6 +71,6 @@
 # 17. Unbound Local Error (Variable local no asignada)
 # Se produce cuando se intenta acceder a una variable local en una función o método, pero no se ha asignado un valor a esa variable.
 # Ejemplo:
-def mi_funcion():
-    print(x)
-mi_funcion()
+#def mi_funcion():
+    #print(x)
+#mi_funcion()
