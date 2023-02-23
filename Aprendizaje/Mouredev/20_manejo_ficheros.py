@@ -1,17 +1,19 @@
 ### Manejo de ficheros - File Handling ###
-
-import json
 import os
+import json
+import csv
+import xml
+# import xlrd # Debe instalarse la librería xlrd para poder leer ficheros de Excel
 
 # 1. .txt file
-'''
+"""
 # Abrir el fichero
 # Primero buscará el fichero en la carpeta donde se encuentra el script
 txt_file = open("Aprendizaje/Mouredev/mi_fichero.txt", "r+")
-
 # Al no encontrarlo, creará el fichero.
 txt_file.write("Mi nombre es Xavi\nMi apellido es Quesada\nTengo 31 años\nY mi lenguaje favorito es Python")
-
+"""
+'''
 # Leer el fichero
 #print(txt_file.read()) #Lee todo el fichero
 print(txt_file.read(10)) #Lee los primeros 10 caracteres
@@ -71,24 +73,21 @@ print(json_dict["nombre"]) # Para acceder a un valor del diccionario
 # .csv file
 # Es un fichero de texto plano que contiene datos separados por comas
 
-import csv
-'''
+"""
 csv_file = open("Aprendizaje/Mouredev/mi_fichero.csv", "w+") #Crea el fichero csv
 csv_writer = csv.writer(csv_file) #Crea el escritor del fichero csv
 csv_writer.writerow(["nombre", "apellido", "edad", "lenguaje"]) #Escribe una fila en el fichero csv (Es cómo un array)
 csv_writer.writerow(["Xavi", "Quesada", 31, "Python"]) #Escribe una fila en el fichero csv (Es cómo un array)
-csv_writer.writerow(["Juan", "", 25, ""])
-'''
+csv_writer.writerow(["Juan", "", 25, ""]) 
+"""
 
 # .xlsx file
 # Es un fichero de Excel
 
-#import xlrd # Debe instalarse la librería xlrd para poder leer ficheros de Excel
 
 # .xml file
 # Es un fichero de texto plano que contiene datos separados por etiquetas
 '''
-import xml
 
 xml_file = open("Aprendizaje/Mouredev/mi_fichero.xml", "w+") #Crea el fichero xml
 xml_file.write("<nombre>Xavi</nombre>") #Escribe en el fichero xml
@@ -100,8 +99,11 @@ xml_file.write("<lenguaje>Python</lenguaje>") #Escribe en el fichero xml
 # .html file
 # Es un fichero de texto plano que contiene datos separados por etiquetas
 
-html_file = open("Aprendizaje/Mouredev/mi_fichero.html", "w+") #Crea el fichero html
-html_file.write("<html><head><title>Mi página web</title></head><body><h1>Hola mundo</h1></body></html>") #Escribe en el fichero html
+html_file = open("Aprendizaje/Mouredev/mi_fichero.html",
+                 "w+")  # Crea el fichero html
+# Escribe en el fichero html
+html_file.write(
+    "<html><head><title>Mi página web</title></head><body><h1>Hola mundo</h1></body></html>")
 
 
 # .pdf file

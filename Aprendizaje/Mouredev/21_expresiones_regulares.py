@@ -5,25 +5,43 @@
 import re
 
 # Se crea una variable con el texto a buscar
-texto = "Hola Mundo"
+mi_string = "Esta es otra lección de Python."
+mi_otro_string = "Esta no es una lección de Python."
 
-# Se crea una variable con la expresión regular
-expresion_regular = "Hola"
+variable_match = re.match("Esta es otra", mi_string, re.I) #Guarda el objeto de tipo match en una variable
 
-# Se crea una variable con la función search() que busca la expresión regular en el texto
-resultado = re.search(expresion_regular, texto)
+'''
+print(variable_match) #Muestra el objeto de tipo match
+print(variable_match.span()) #Muestra en que posición se encuentra la cadena en el texto
+print(variable_match.string) #Muestra el texto completo
+print(variable_match.group()) #Muestra la cadena encontrada
 
-# Se imprime el resultado
-print(resultado)
+inicio, final = variable_match.span() #Guarda en dos variables el inicio y el final de la cadena encontrada
+print(mi_string[inicio:final]) # Accede a la variable mi_string y muestra la cadena encontrada desde el inicio hasta el final
+'''
 
-# Se imprime el tipo de dato
-print(type(resultado))
+'''
+print(re.match("Esta es otra", mi_string)) #Muestra "Esta es otra" porque encuentra la cadena en el texto.
+print(re.match("otra lección de Python", mi_string, )) #Muestra None porque no funciona con el final de la cadena.
+print(re.match("Esta es otra", mi_otro_string)) #Muestra None porque no encuentra la cadena en el texto.
+'''
 
-# Se imprime el valor de la variable resultado
-print(resultado.group())
+# Comprobamos si la cadena se encuentra en el texto
+# Si encuentra el valor:
+variable_match = re.match("Esta no es una lección", mi_otro_string, re.I)
 
-# Se crea una variable con la función match() que busca la expresión regular al principio del texto
-resultado = re.match(expresion_regular, texto)
+# No encuentra el valor:
+#variable_match = re.match("Esta es otra lección", mi_otro_string, re.I)
 
-# Se imprime el resultado
-print(resultado)
+
+if (variable_match == None): #Si no encuentra la cadena en el texto, muestra el mensaje antes del error
+    #También se puede hacer con: if variable_match != None:
+    print("No se ha encontrado la cadena en el texto")
+    print(variable_match)
+    inicio, final = variable_match.span()
+    print(mi_otro_string[inicio:final])
+else:
+    print("Si se ha encontrado la cadena en el texto")
+    print(variable_match)
+    inicio, final = variable_match.span()
+    print(mi_otro_string[inicio:final])
