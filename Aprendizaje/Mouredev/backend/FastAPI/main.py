@@ -49,3 +49,9 @@ async def url():
 
 # Documentación de FastAPI:
 # https://fastapi.tiangolo.com/es/
+
+# CRUD:
+# C: Create (Crear)
+# R: Read (Leer)
+# U: Update (Actualizar)
+# D: Delete (Eliminar)
