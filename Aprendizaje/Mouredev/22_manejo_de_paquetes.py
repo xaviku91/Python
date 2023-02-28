@@ -24,6 +24,7 @@
 # pip uninstall nombre_del_paquete
 
 
+from myotherpackage import other_arithmetics
 from mypackage import arithmetics
 import requests
 import pandas
@@ -54,6 +55,9 @@ print(respuesta.json())  # Devuelve un diccionario
 
 # Paquetes
 # Creamos un paquete llamado mypackage y utilizamos el fichero arithmetics.py
-print(arithmetics.suma_dos_valores(2, 3))
+print("La suma es: ", arithmetics.suma_dos_valores(2, 3))
 
-# El __init__.py es un fichero que se ejecuta cuando se importa un paquete
+# El __init__.py es un fichero que se ejecuta cuando se importa el paquete
+
+# Creamos otro paquete llamado myotherpackage y utilizamos el fichero other_arithmetics.py
+print("La resta es: ", other_arithmetics.resta_dos_valores(4, 3))
