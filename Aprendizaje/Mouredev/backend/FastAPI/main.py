@@ -39,3 +39,13 @@ async def url():
 
 # Thunder Client:
 # Es una extensión de VS Code para hacer peticiones HTTP
+
+
+# Tipos de métodos HTTP:
+# POST: Para crear datos
+# GET: Para leer datos
+# PUT: Para actualizar datos
+# DELETE: Para eliminar datos
+
+# Documentación de FastAPI:
+# https://fastapi.tiangolo.com/es/
